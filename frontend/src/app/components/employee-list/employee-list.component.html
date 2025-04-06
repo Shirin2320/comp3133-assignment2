@@ -1,0 +1,8 @@
+<p *ngIf="employees.length === 0">Loading employees...</p>
+
+<div *ngFor="let emp of employees" class="employee-card">
+  <h3>{{ emp.name }}</h3>
+  <p>Email: {{ emp.email }}</p>
+  <p>Salary: {{ emp.salary | currency }}</p>
+  <a [routerLink]="['/employee', emp.id]">View Details</a>
+</div>

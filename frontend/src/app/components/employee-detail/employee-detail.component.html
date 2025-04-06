@@ -1,0 +1,9 @@
+<div *ngIf="employee" class="employee-detail">
+  <h2>{{ employee.name | capitalize }}</h2>
+  <p>Email: {{ employee.email }}</p>
+  <p>Salary: {{ employee.salary | currency }}</p>
+  <a routerLink="/">← Back to List</a>
+</div>
+
+<!-- Optional loading message -->
+<p *ngIf="!employee">Loading employee details...</p>
